@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amazon Connect Chat Widget</title>
+</head>
+<body>
+  <h2>Support Chat</h2>
+  <p>You can send formatted messages and attachments using the chat below.</p>
+  <script type="text/javascript">
+  (function(w, d, x, id){
+    s=d.createElement('script');
+    s.src='https://p3f-learn.my.connect.aws/connectwidget/static/amazon-connect-chat-interface-client.js';
+    s.async=1;
+    s.id=id;
+    d.getElementsByTagName('head')[0].appendChild(s);
+    w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+  })(window, document, 'amazon_connect', 'e690cbf8-8046-4fdb-9170-f7b75576e664');
+  amazon_connect('styles', { iconType: 'CHAT', openChat: { color: '#ffffff', backgroundColor: '#2d715d' }, closeChat: { color: '#000000', backgroundColor: '#2d715d'} });
+  amazon_connect('snippetId', 'QVFJREFIaWFZYXRVSlpIekdkUUg5YXhZenVQMktKRXNIWTVFQWpBYVErTEdzRnpvZHdFSFZhc0hLamtlSm0vZEVxNHN2SWQvQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNS1BBY0Y2UzNLQWxZY0xYQ0FnRVFnQ3VIU2ZXU00yWlI4RmFSWEJBMjhLRnRyaXU2VGlPQzZBckRqanQyL2ZqV1huTVY1U3ZYR0ZhQnhYcm46OktJVlV4eTJ2MlR0VloxaFlPNUtrQ0J6bTZtSzVLeFdRYkRMdm55UkFaQnlCRGdCeU45V29iZ2dleVJFMkVTYTMyK3plQkJHS1d6SDdZVGFIRlVaenArWFhFS2J3VUU0WmphemZ3U1pBQTR2cWtDaG5GcmJSRCtYdnBYRStCU1owVzlLbG9wcmVsVmpHU2ZFclM3aVk4TFdLaFpkeFZTRT0=');
+  amazon_connect('supportedMessagingContentTypes', [
+      'text/plain',
+      'text/markdown',
+      'application/vnd.amazonaws.connect.message.interactive',
+      'application/vnd.amazonaws.connect.message.interactive.response',
+      'application/vnd.amazonaws.connect.message.attachment'
+    ]);
+</script>
+  
+
+</body>
+</html>
